@@ -1,0 +1,39 @@
+[package]
+name = "android_glue_example"
+version = "0.1.0"
+authors = ["Captcha <captcha.yang@dasudian.com>"]
+
+[[bin]]
+name = "android_glue_example"
+path = "src/main.rs"
+
+[dependencies.android_glue]
+android_glue = "0.2.2"
+
+
+[package.metadata.android]
+
+# The Java package name for your application.
+# Hyphens are converted to underscores.
+package_name = "com.example.android_glue_example"
+
+# The user-friendly name for your app, as displayed in the applications menu.
+label = "Android App"
+
+# Path to your application's res/ folder. See `examples/use_icon/res`.
+res = "app/res"
+
+
+# Path to the folder containing your application's assets. See `examples/use_assets/assets`.
+assets = "app/assets"
+
+# The target Android API level.
+# It defaults to 18 because this is the minimum supported by rustc.
+android_version = 18
+
+# If set to true, makes the app run in full-screen, by adding the following line
+# as an XML attribute to the manifest's <application> tag :
+#     android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen
+# Defaults to false.
+fullscreen = false
+
